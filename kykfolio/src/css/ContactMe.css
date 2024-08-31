@@ -94,6 +94,12 @@ body {
   border-radius: 200px 200px 0 0;
   align-self: flex-end;
 }
+.text-section {
+  /* max-width: 50%; */
+  margin-top: 0px;
+  margin-bottom: 100px;
+  /* background-color: red; */
+}
 
 /* Responsivité */
 @media screen and (max-width: 1457px) {
@@ -179,7 +185,7 @@ body {
   .contact-form input,
   .contact-form textarea {
     width: 95%;
-    padding: 12px;
+    /* padding: 12px; */
     border: 2px solid #ddd; /* Bordure gris clair */
     border-radius: 8px; /* Coins arrondis */
     font-size: 1em;

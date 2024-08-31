@@ -17,7 +17,7 @@ const projects = [
   },
   {
     image: '/S2S.PNG',
-    title: 'Projet 3',
+    title: 'Copie du site S2 Vichy',
     description: "Ce projet est une copie du site de S2 Vichy, cela m’a permis de valider mes compétences dans ces langages. Ce site a été réalisé durant mon temps libre et n’est pas présent en ligne pour des raisons juridiques.",
     languages: 'HTML, CSS, JavaScript',
   },
