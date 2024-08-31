@@ -4,9 +4,9 @@ import '../css/Projects.css';
 
 const projects = [
   {
-    image: 'https://via.placeholder.com/400',
-    title: 'Projet 1',
-    description: 'Description du projet 1',
+    image: '/WB.png',
+    title: 'Willy Blanc',
+    description: "J'ai développé un site pour présenter un élevage familial de poulets de Bresse en utilisant React et Three.js (R3F). Le site permet de visiter la ferme en 3D et de voir comment les poulets sont élevés.",
   },
   {
     image: 'https://via.placeholder.com/400',
