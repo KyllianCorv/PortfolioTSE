@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+
+.menu {
+  position: fixed;
+  background-color: #f9f9f9;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  transition: right 0.4s ease;
+  z-index: 1000;
+  font-family: 'Roboto', sans-serif;
+}
+
+.menu.open {
+  right: 0;
+}
+
+.menu-left {
+  width: 50%;
+  background-color: #f9f9f9;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.red-square {
+  width: 600px;
+  height: 600px;
+  border-radius: 15px;
+  background-color: #f9f9f9;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.menu-right {
+  width: 50%;
+  background-color: #f9f9f9;
+  color: #333333;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+  padding: 20px;
+}
+
+.menu-right2 {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f9f9f9;
+  color: #333333;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  height: 80%;
+  position: relative;
+  border-left: 1px solid #000;
+}
+
+.menu-header {
+  text-align: center;
+}
+
+.slogan {
+  font-size: 1.2em;
+  margin-top: 10px;
+  color: #666666;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2em;
+  color: #333333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #c39156;
+}
+
+@media (max-width: 768px) {
+  .close-btn {
+    right: -20px; /* Position normale pour les tablettes */
+  }
+  .menu-right2 {
+    border-left: none;
+  }
+  .menu-left{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  .close-btn {
+    margin-right: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .close-btn {
+    right: -20px; /* Décale la croix encore plus à droite pour les petits écrans */
+  }
+}
+
+
+
+.menu-right ul {
+  list-style: none;
+  padding: 0;
+  /* margin: 50px 0; */
+  text-align: left;
+  margin-left: 20px;
+}
+
+.menu-right ul li {
+  margin: 20px 0;
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.menu-right ul h1 {
+  font-family: "Poppins", sans-serif;
+  color: #c39156;
+  margin: 20px 0;
+  font-size: clamp(5em, 10vw, 15em); /* Taille de police responsive */
+  margin-left: 20px;
+  line-height: 1.1; /* Ajustement de l'espacement entre les lignes */
+}
+
+.menu-right ul li a {
+  font-family: "Poppins", sans-serif;
+  color: #333333;
+  text-decoration: none;
+  margin-left: 40px;
+  font-size: 1.5em;
+  font-weight: 600;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-right ul li a i {
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+
+.menu-right ul li a:hover {
+  color: #c39156;
+  transform: scale(1.05);
+}
+
+.menu-footer {
+  width: 100%;
+  font-size: 0.9em;
+  color: #888888;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1024px) {
+  .menu-left {
+    display: none; /* Cache la partie gauche sur les tablettes */
+  }
+  .menu-right {
+    width: 100%; /* Réduit la largeur du menu de droite sur les grands tablettes */
+    padding: 20px;
+  }
+  .menu-right2 {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-left {
+    display: none; /* Cache la partie gauche sur les tablettes */
+  }
+
+  .menu-right {
+    width: 100%; /* Prend toute la largeur de l'écran */
+    padding: 20px;
+  }
+
+  .menu-right ul h1 {
+    font-size: clamp(4em, 8vw, 10em); /* Taille de police ajustée pour les tablettes */
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-right {
+    padding: 15px; /* Réduit le padding sur les petits écrans */
+  }
+
+  .menu-right ul h1 {
+    font-size: clamp(3em, 6vw, 7em); /* Taille de police ajustée pour les petits écrans */
+    margin-left: 10px; /* Réduit la marge à gauche pour les petits écrans */
+  }
+
+  .menu-right ul li a {
+    font-size: 1.2em; /* Réduit la taille des liens pour les petits écrans */
+    margin-left: 20px; /* Réduit la marge des liens pour les petits écrans */
+  }
+
+
+  .logo {
+    font-size: 1.5em;
+  }
+
+  .slogan {
+    font-size: 1em;
+  }
+
+  .menu-footer {
+    font-size: 0.8em; /* Réduit la taille du texte du footer pour les petits écrans */
+  }
+}
+
+.menu-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-links {
+  display: flex;
+}
+
+.icon-links a {
+  color: #333;
+  text-decoration: none;
+  font-size: 0.1rem;
+}
+
+.icon-links a:hover {
+  color: #007bff;
+}
