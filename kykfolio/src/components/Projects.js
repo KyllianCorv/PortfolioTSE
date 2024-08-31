@@ -62,7 +62,7 @@ const ProjectList = () => {
 const App = () => {
   return (
     <div className="app-container">
-      <h1>Mes Projets</h1>
+      {/* <h1>Mes Projets</h1> */}
       <div className="content-wrapper">
         <ProjectList />
       </div>
