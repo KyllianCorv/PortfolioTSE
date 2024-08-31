@@ -7,49 +7,31 @@ const projects = [
     image: '/WB.png',
     title: 'Willy Blanc',
     description: "J'ai développé un site pour présenter un élevage familial de poulets de Bresse en utilisant React et Three.js (R3F). Le site permet de visiter la ferme en 3D et de voir comment les poulets sont élevés.",
+    languages: 'React, Three.js (R3F)',
   },
   {
-    image: 'https://via.placeholder.com/400',
-    title: 'Projet 2',
-    description: 'Description du projet 2',
+    image: '/ArtGallery.png',
+    title: 'Gallery d\'art',
+    description: "J'ai créé un site pour présenter une galerie d'art en utilisant React et Three.js (R3F). Le site permet de visiter la galerie en 3D et d'explorer les œuvres exposées.",
+    languages: 'React, Three.js (R3F)',
   },
   {
-    image: 'https://via.placeholder.com/400',
+    image: '/S2S.PNG',
     title: 'Projet 3',
-    description: 'Description du projet 3',
+    description: "Ce projet est une copie du site de S2 Vichy, cela m’a permis de valider mes compétences dans ces langages. Ce site a été réalisé durant mon temps libre et n’est pas présent en ligne pour des raisons juridiques.",
+    languages: 'HTML, CSS, JavaScript',
   },
-  {
-    image: 'https://via.placeholder.com/400',
-    title: 'Projet 1',
-    description: 'Description du projet 1',
-  },
-  {
-    image: 'https://via.placeholder.com/400',
-    title: 'Projet 2',
-    description: 'Description du projet 2',
-  },
-  {
-    image: 'https://via.placeholder.com/400',
-    title: 'Projet 3',
-    description: 'Description du projet 3',
-  },
-  {
-    image: 'https://via.placeholder.com/400',
-    title: 'Projet 1',
-    description: 'Description du projet 1',
-  },
-  
-  
   // Ajoutez plus de projets ici
 ];
 
-const ProjectCard = ({ image, title, description }) => {
+const ProjectCard = ({ image, title, description, languages }) => {
   return (
     <div className="project-card">
       <img src={image} alt={title} className="project-image" />
       <div className="project-info">
         <h3>{title}</h3>
         <p>{description}</p>
+        <p><strong>Langages utilisés:</strong> {languages}</p>
       </div>
     </div>
   );
@@ -58,14 +40,21 @@ const ProjectCard = ({ image, title, description }) => {
 const ProjectList = () => {
   return (
     <div className="project-list">
-      {projects.map((project, index) => (
-        <ProjectCard
-          key={index}
-          image={project.image}
-          title={project.title}
-          description={project.description}
-        />
-      ))}
+      <div className="project-list">
+        {projects.map((project, index) => (
+          <ProjectCard
+            key={index}
+            image={project.image}
+            title={project.title}
+            description={project.description}
+            languages={project.languages}
+          />
+        ))}
+        
+      </div>
+      <a href="https://o2o.to/i/3EhIj4" target="_blank" rel="noopener noreferrer">
+        <button className="project-button">Voir tous les projets</button>
+      </a>
     </div>
   );
 };
@@ -77,6 +66,7 @@ const App = () => {
       <div className="content-wrapper">
         <ProjectList />
       </div>
+      
     </div>
   );
 };

@@ -36,6 +36,27 @@ h1 {
   max-width: 1200px;
 }
 
+.project-button {
+  background-color: #c39156;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.project-button:hover {
+  border: #333 solid 1px;
+  background-color: #f9f9f9;
+  color: black;
+}
+
+
 .project-card {
   background-color: #f8f9fa;
   border-radius: 10px;
